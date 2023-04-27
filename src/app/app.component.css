@@ -1,0 +1,18 @@
+aside {
+  background-color: #1E213A;
+  min-height: 100vh;
+  background-image: url('../assets/images/Cloud-background.png');
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+main {
+  background-color: #100E1D;
+  min-height: 100vh;
+}
+
+.overlay {
+  background-color: #1e213acd;
+  min-height: 100%;
+  width: 100%;
+}
