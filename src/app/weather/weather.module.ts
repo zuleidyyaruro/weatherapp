@@ -5,8 +5,9 @@ import { SharedModule } from '../shared/shared.module';
 import { ContainerWeatherComponent } from './components/container-weather/container-weather.component';
 import { AsideComponent } from './components/aside/aside.component';
 import { MainComponent } from './components/main/main.component';
+import { PrimeNgModule } from '../prime-ng/prime-ng.module';
 
-
+import { FormsModule } from '@angular/forms'
 
 
 @NgModule({
@@ -17,8 +18,10 @@ import { MainComponent } from './components/main/main.component';
   ],
   imports: [
     CommonModule,
+    FormsModule,
     SharedModule,
-    HttpClientModule
+    HttpClientModule,
+    PrimeNgModule
   ],
   exports: [
     ContainerWeatherComponent,

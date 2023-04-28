@@ -1,3 +1,30 @@
-<div class="overlay">
-  latitude
+<div class="overlay ">
+
+  <div class="flex justify-content-between w-10 m-auto py-4">
+    <p-button label="Search for places" styleClass="p-button-raised p-button-secondary"></p-button>
+    <p-button icon="pi pi-map-marker" styleClass="p-button-rounded p-button-secondary"></p-button>
+  </div>
+
+  <div class=" text-center py-6">
+    <img [src]="chooseImage(data.weather[0].icon)" alt="">
+  </div>
+
+  <div>
+    <h3 class="text-center text-7xl text-white">{{data.main.temp}}<span class="text-5xl font-light"
+        style="color: #A09FB1;">°c</span></h3>
+  </div>
+
+  <div>
+    <p class=" text-center mt-5 text-xl" style="color: #A09FB1;">{{data.weather[0].description | titlecase}}
+    </p>
+  </div>
+
+  <div class="flex py-5 justify-content-center mt-3" style="color: #88869D;">
+    <p class="px-2">Today</p>
+    <p class="flex align-items-center px-2"><i class="pi pi-circle-fill" style="font-size: 5px"></i></p>
+    <p>{{date | date : 'fullDate'}}</p>
+  </div>
+
+  <p class="text-lg text-center mt-3" style="color: #88869D;"><i class="pi pi-map-marker px-2"></i>{{data.name}}</p>
+
 </div>

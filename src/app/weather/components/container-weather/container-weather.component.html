@@ -1,13 +1,13 @@
-<app-loader *ngIf="latitude===0 && longitude===0; else app"></app-loader>
+<app-loader *ngIf="!data || !dataDaily; else app"></app-loader>
 
 
 <ng-template #app>
   <div class="grid  m-0">
-    <aside class="col-4  p-0">
-      <app-aside></app-aside>
+    <aside class="col-12 lg:col-4  p-0 ">
+      <app-aside [data]="data"></app-aside>
     </aside>
-    <main class="col">
-      <app-main></app-main>
+    <main class="col flex flex-column justify-content-center">
+      <app-main [dataDaily]="dataDaily"></app-main>
     </main>
   </div>
 </ng-template>
