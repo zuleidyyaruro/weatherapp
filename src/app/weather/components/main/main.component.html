@@ -1,57 +1,165 @@
-<div class="w-10 h-screen flex flex-column justify-content-evenly  m-auto ">
+<!-- <div class="w-10 m-auto grid  text-white border-1">
 
-  <div class="grid   text-white">
+  <div class="col card-daily mx-2 ">
+    <p class="text-center text-white p-3">Tomorrow</p>
+    <div class="text-center">
+      <img [src]="chooseImage(dataDaily.daily[0].weather[0].icon)" alt="" width="80px">
+    </div>
+    <div class="flex justify-content-evenly mt-3">
+      <span class="text-white">{{dataDaily.daily[0].temp.max | number: '1.0-0'}}°C</span>
+      <span style="color: #A09FB1;">{{dataDaily.daily[0].temp.min | number: '1.0-0'}}°C</span>
+    </div>
+  </div>
 
-    <div class="col card-daily mx-2 ">
-      <p class="text-center text-white p-3">Tomorrow</p>
+  <div class="col card-daily mx-2 text-center">
+    <p class="text-center text-white p-3">{{date1 | date : 'EEE, dd LLL'}}</p>
+    <div class="text-center">
+      <img [src]="chooseImage(dataDaily.daily[1].weather[0].icon)" alt="" width="80px">
+    </div>
+    <div class="flex justify-content-evenly mt-3">
+      <span class="text-white">{{dataDaily.daily[1].temp.max | number: '1.0-0'}}°C</span>
+      <span style="color: #A09FB1;">{{dataDaily.daily[1].temp.min | number: '1.0-0'}}°C</span>
+    </div>
+  </div>
+
+  <div class="col card-daily mx-2 text-center">
+    <p class="text-center text-white p-3">{{date2 | date : 'EEE, dd LLL'}}</p>
+    <div class="text-center">
+      <img [src]="chooseImage(dataDaily.daily[2].weather[0].icon)" alt="" width="80px">
+    </div>
+    <div class="flex justify-content-evenly mt-3">
+      <span class="text-white">{{dataDaily.daily[2].temp.max | number: '1.0-0'}}°C</span>
+      <span style="color: #A09FB1;">{{dataDaily.daily[2].temp.min | number: '1.0-0'}}°C</span>
+    </div>
+  </div>
+
+  <div class="col card-daily mx-2">
+    <p class="text-center text-white p-3">{{date3 | date : 'EEE, dd LLL'}}</p>
+    <div class="text-center">
+      <img [src]="chooseImage(dataDaily.daily[3].weather[0].icon)" alt="" width="80px">
+    </div>
+    <div class="flex justify-content-evenly mt-3">
+      <span class="text-white">{{dataDaily.daily[3].temp.max | number: '1.0-0'}}°C</span>
+      <span style="color: #A09FB1;">{{dataDaily.daily[3].temp.min | number: '1.0-0'}}°C</span>
+    </div>
+  </div>
+
+  <div class="col card-daily mx-2">
+    <p class="text-center text-white p-3">{{date4 | date : 'EEE, dd LLL'}}</p>
+    <div class="text-center">
+      <img [src]="chooseImage(dataDaily.daily[4].weather[0].icon)" alt="" width="80px">
+    </div>
+    <div class="flex justify-content-evenly mt-3">
+      <span class="text-white">{{dataDaily.daily[4].temp.max | number: '1.0-0'}}°C</span>
+      <span style="color: #A09FB1;">{{dataDaily.daily[4].temp.min | number: '1.0-0'}}°C</span>
+    </div>
+  </div>
+
+</div> -->
+
+<!-- <div class="text-2xl text-white mt-3">
+  <h3>Today Hightlights</h3>
+
+  <div class="grid mt-2 ">
+
+    <div class="col card-daily m-3 p-5">
+      <p class="text-center text-base">Wind Sttus</p>
+      <p class="text-7xl text-center">{{dataDaily.current.wind_speed | number: '1.0-0' }}
+        <span class="text-4xl">mph</span>
+      </p>
+      <p class="text-center mt-3">
+        <i class="pi pi-arrow-up  border-circle p-2 " [style]="windOrientation(dataDaily.current.wind_deg)"
+          style="background-color: #8b8a8aa1; color: #E7E7EB;"></i>
+        <span class="text-base"> WSW</span>
+      </p>
+    </div>
+
+    <div class=" col card-daily m-3 p-5">
+      <p class="text-center text-base">Humidity</p>
+      <p class="text-7xl text-center">{{humidity | number: '1.0-0' }}
+        <span class="text-4xl">%</span>
+      </p>
+
+      <div class="mt-4">
+        <p-slider [(ngModel)]="humidity" [disabled]="true"></p-slider>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="grid">
+
+    <div class="col card-daily m-3 p-5">
+      <p class="text-center text-base">Visibility</p>
+      <p class="text-7xl text-center">{{dataDaily.current.visibility | number }}
+        <span class="text-4xl">mts</span>
+      </p>
+    </div>
+
+    <div class="col card-daily m-3 p-5">
+      <p class="text-center text-base">Air Pressure</p>
+      <p class="text-7xl text-center">{{dataDaily.current.pressure | number }}
+        <span class="text-4xl">mb</span>
+      </p>
+    </div>
+  </div>
+</div> -->
+
+<div class="h-full flex flex-column justify-content-center">
+
+  <div class=" grid w-11 lg:w-10 m-auto ">
+
+    <div class=" col-6 lg:col card-daily p-3" style="border: 4px solid #100E1D;">
+      <p class="text-center text-white">Tomorrow</p>
       <div class="text-center">
         <img [src]="chooseImage(dataDaily.daily[0].weather[0].icon)" alt="" width="80px">
       </div>
-      <div class="flex justify-content-evenly mt-3">
+      <div class="flex justify-content-evenly">
         <span class="text-white">{{dataDaily.daily[0].temp.max | number: '1.0-0'}}°C</span>
         <span style="color: #A09FB1;">{{dataDaily.daily[0].temp.min | number: '1.0-0'}}°C</span>
       </div>
     </div>
 
-    <div class="col card-daily mx-2 text-center">
-      <p class="text-center text-white p-3">{{date1 | date : 'EEE, dd LLL'}}</p>
+    <div class="col-6 lg:col card-daily text-center p-3" style="border: 4px solid #100E1D;">
+      <p class="text-center text-white ">{{date1 | date : 'EEE, dd LLL'}}</p>
       <div class="text-center">
         <img [src]="chooseImage(dataDaily.daily[1].weather[0].icon)" alt="" width="80px">
       </div>
-      <div class="flex justify-content-evenly mt-3">
+      <div class="flex justify-content-evenly ">
         <span class="text-white">{{dataDaily.daily[1].temp.max | number: '1.0-0'}}°C</span>
         <span style="color: #A09FB1;">{{dataDaily.daily[1].temp.min | number: '1.0-0'}}°C</span>
       </div>
     </div>
 
-    <div class="col card-daily mx-2 text-center">
-      <p class="text-center text-white p-3">{{date2 | date : 'EEE, dd LLL'}}</p>
+    <div class="col-6 lg:col card-daily text-center p-3" style="border: 4px solid #100E1D;">
+      <p class="text-center text-white ">{{date2 | date : 'EEE, dd LLL'}}</p>
       <div class="text-center">
         <img [src]="chooseImage(dataDaily.daily[2].weather[0].icon)" alt="" width="80px">
       </div>
-      <div class="flex justify-content-evenly mt-3">
+      <div class="flex justify-content-evenly">
         <span class="text-white">{{dataDaily.daily[2].temp.max | number: '1.0-0'}}°C</span>
         <span style="color: #A09FB1;">{{dataDaily.daily[2].temp.min | number: '1.0-0'}}°C</span>
       </div>
     </div>
 
-    <div class="col card-daily mx-2">
-      <p class="text-center text-white p-3">{{date3 | date : 'EEE, dd LLL'}}</p>
+    <div class="col-6 lg:col card-daily text-center p-3" style="border: 4px solid #100E1D;">
+      <p class="text-center text-white ">{{date3 | date : 'EEE, dd LLL'}}</p>
       <div class="text-center">
         <img [src]="chooseImage(dataDaily.daily[3].weather[0].icon)" alt="" width="80px">
       </div>
-      <div class="flex justify-content-evenly mt-3">
+      <div class="flex justify-content-evenly ">
         <span class="text-white">{{dataDaily.daily[3].temp.max | number: '1.0-0'}}°C</span>
         <span style="color: #A09FB1;">{{dataDaily.daily[3].temp.min | number: '1.0-0'}}°C</span>
       </div>
     </div>
 
-    <div class="col card-daily mx-2">
-      <p class="text-center text-white p-3">{{date4 | date : 'EEE, dd LLL'}}</p>
+    <div class="col-6 lg:col card-daily text-center p-3" style="border: 4px solid #100E1D;">
+      <p class="text-center text-white ">{{date4 | date : 'EEE, dd LLL'}}</p>
       <div class="text-center">
         <img [src]="chooseImage(dataDaily.daily[4].weather[0].icon)" alt="" width="80px">
       </div>
-      <div class="flex justify-content-evenly mt-3">
+      <div class="flex justify-content-evenly ">
         <span class="text-white">{{dataDaily.daily[4].temp.max | number: '1.0-0'}}°C</span>
         <span style="color: #A09FB1;">{{dataDaily.daily[4].temp.min | number: '1.0-0'}}°C</span>
       </div>
@@ -59,52 +167,44 @@
 
   </div>
 
-  <div class="text-2xl text-white">
-    <h3>Today Hightlights</h3>
+  <div class="grid w-11 lg:w-10 m-auto text-white">
 
-    <div class="grid mt-4 ">
+    <h3 class="w-full  m-auto lg:mb-4 mt-4">Today Hightlights</h3>
 
-      <div class="col card-daily m-3 p-5">
-        <p class="text-center text-base">Wind Sttus</p>
-        <p class="text-7xl text-center">{{dataDaily.current.wind_speed | number: '1.0-0' }}
-          <span class="text-4xl">mph</span>
-        </p>
-        <p class="text-center mt-3">
-          <i class="pi pi-arrow-up  border-circle p-2 " [style]="windOrientation(dataDaily.current.wind_deg)"
-            style="background-color: #8b8a8aa1; color: #E7E7EB;"></i>
-          <span class="text-base"> WSW</span>
-        </p>
-      </div>
-
-      <div class=" col card-daily m-3 p-5">
-        <p class="text-center text-base">Humidity</p>
-        <p class="text-7xl text-center">{{humidity | number: '1.0-0' }}
-          <span class="text-4xl">%</span>
-        </p>
-
-        <div class="mt-4">
-          <p-slider [(ngModel)]="humidity" [disabled]="true"></p-slider>
-        </div>
-
-      </div>
-
+    <div class="col-12 lg:col-6 card-daily p-5 " style="border: 4px solid #100E1D;">
+      <p class="text-center text-base">Wind Sttus</p>
+      <p class="text-7xl text-center">{{dataDaily.current.wind_speed | number: '1.0-0' }}
+        <span class="text-4xl">mph</span>
+      </p>
+      <p class="text-center mt-3">
+        <i class="pi pi-arrow-up  border-circle p-1" [style]="windOrientation(dataDaily.current.wind_deg)"
+          style="background-color: #8b8a8aa1; color: #E7E7EB;"></i>
+        <span class="text-base"> WSW</span>
+      </p>
     </div>
 
-    <div class="grid">
-
-      <div class="col card-daily m-3 p-5">
-        <p class="text-center text-base">Visibility</p>
-        <p class="text-7xl text-center">{{dataDaily.current.visibility | number }}
-          <span class="text-4xl">mts</span>
-        </p>
+    <div class=" col-12 lg:col-6 card-daily p-5" style="border: 4px solid #100E1D;">
+      <p class="text-center text-base">Humidity</p>
+      <p class="text-7xl text-center">{{humidity | number: '1.0-0' }}
+        <span class="text-4xl">%</span>
+      </p>
+      <div class="mt-4">
+        <p-slider [(ngModel)]="humidity" [disabled]="true"></p-slider>
       </div>
+    </div>
 
-      <div class="col card-daily m-3 p-5">
-        <p class="text-center text-base">Air Pressure</p>
-        <p class="text-7xl text-center">{{dataDaily.current.pressure | number }}
-          <span class="text-4xl">mb</span>
-        </p>
-      </div>
+    <div class="col-12 lg:col-6 card-daily p-5" style="border: 4px solid #100E1D;">
+      <p class="text-center text-base">Visibility</p>
+      <p class="text-7xl text-center">{{dataDaily.current.visibility | number }}
+        <span class="text-4xl">mts</span>
+      </p>
+    </div>
+
+    <div class="col-12 lg:col-6 card-daily p-5" style="border: 4px solid #100E1D;">
+      <p class="text-center text-base">Air Pressure</p>
+      <p class="text-7xl text-center">{{dataDaily.current.pressure | number }}
+        <span class="text-4xl">mb</span>
+      </p>
     </div>
   </div>
 
