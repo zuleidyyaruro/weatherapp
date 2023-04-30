@@ -13,6 +13,7 @@ export class ContainerWeatherComponent implements OnInit {
   public longitude: number = 0;
   public data!: Weather;
   public dataDaily!: WeatherOneCall;
+  public sidebarVisible: boolean = false;
 
   constructor(private _weatherService: WeatherService) { }
 
@@ -31,6 +32,10 @@ export class ContainerWeatherComponent implements OnInit {
     this._weatherService.getWeatherOneCall(4.6097, -74.0817).subscribe((res: any) => {
       this.dataDaily = res;
     })
+  }
+
+  searchPlaces(event: boolean) {
+    this.sidebarVisible = event;
   }
 
 }

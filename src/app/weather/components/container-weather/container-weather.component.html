@@ -4,8 +4,9 @@
 <ng-template #app>
   <div class="grid  m-0 h-full">
     <aside class="col-12 md:col-12 lg:col-4  p-0 ">
-      <app-aside [data]="data"></app-aside>
+      <app-aside [data]="data" (onButtonSearchPlaces)="searchPlaces($event)"></app-aside>
     </aside>
+    <app-sidebar [sidebarVisible]="sidebarVisible"></app-sidebar>
     <main class="col-12 md:col-12 lg:col-8 ">
       <app-main [dataDaily]="dataDaily"></app-main>
     </main>

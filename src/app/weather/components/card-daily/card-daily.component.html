@@ -1,0 +1,12 @@
+<p class="text-center text-white" *ngIf="date!=='Tomorrow'; else dateTomorrow">{{date | date : 'EEE, dd LLL' }}</p>
+<ng-template #dateTomorrow>
+  <p class="text-center text-white">{{date }}</p>
+</ng-template>
+
+<div class="text-center">
+  <img [src]="chooseImage(dataDaily.daily[0].weather[0].icon)" alt="" width="80px">
+</div>
+<div class="flex justify-content-evenly">
+  <span class="text-white">{{dataDaily.daily[0].temp.max | number: '1.0-0'}}°C</span>
+  <span style="color: #A09FB1;">{{dataDaily.daily[0].temp.min | number: '1.0-0'}}°C</span>
+</div>

@@ -22,9 +22,7 @@ export class MainComponent implements OnInit {
     this.date2 = this.date.setDate(this.date.getDate() + 1);
     this.date3 = this.date.setDate(this.date.getDate() + 1);
     this.date4 = this.date.setDate(this.date.getDate() + 1);
-
-    this.humidity = this.dataDaily.current.humidity
-    console.log(this.dataDaily)
+    this.humidity = this.dataDaily.current.humidity;
   }
 
   chooseImage(typeIcon: string) {

@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { WeatherModule } from './weather/weather.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -11,6 +12,7 @@ import { WeatherModule } from './weather/weather.module';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     WeatherModule
   ],
   providers: [],

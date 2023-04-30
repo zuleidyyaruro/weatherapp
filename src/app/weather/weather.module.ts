@@ -7,14 +7,18 @@ import { AsideComponent } from './components/aside/aside.component';
 import { MainComponent } from './components/main/main.component';
 import { PrimeNgModule } from '../prime-ng/prime-ng.module';
 
-import { FormsModule } from '@angular/forms'
+import { FormsModule } from '@angular/forms';
+import { CardDailyComponent } from './components/card-daily/card-daily.component';
+import { SidebarComponent } from './components/sidebar/sidebar.component'
 
 
 @NgModule({
   declarations: [
     ContainerWeatherComponent,
     AsideComponent,
-    MainComponent
+    MainComponent,
+    CardDailyComponent,
+    SidebarComponent
   ],
   imports: [
     CommonModule,

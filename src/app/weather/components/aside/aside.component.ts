@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Weather } from '../../interfaces/weather.interface';
 
 @Component({
@@ -8,13 +8,14 @@ import { Weather } from '../../interfaces/weather.interface';
 })
 export class AsideComponent {
 
-  public date: Date = new Date()
+  public date: Date = new Date();
+  public buttonSearch: boolean = false;
   @Input() data!: Weather;
+  @Output() onButtonSearchPlaces: EventEmitter<boolean> = new EventEmitter();
 
   chooseImage(typeIcon: string) {
-    console.log(typeIcon)
-    let src: string = '';
 
+    let src: string = '';
     switch (typeIcon) {
       case "04n":
         src = '../../../../assets/images/HeavyCloud.png';
@@ -33,6 +34,12 @@ export class AsideComponent {
         break;
     }
     return src;
+  }
+
+  searchPlaces() {
+    this.buttonSearch = !this.buttonSearch;
+    console.log(this.buttonSearch)
+    this.onButtonSearchPlaces.emit(this.buttonSearch)
   }
 
 }
