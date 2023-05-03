@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-sidebar',
@@ -7,6 +7,13 @@ import { Component, Input } from '@angular/core';
 })
 export class SidebarComponent {
 
+  public queryLocation: string = '';
   @Input() sidebarVisible: boolean = false;
+  @Output() onQueryLocation: EventEmitter<string> = new EventEmitter();
+
+  searchLocation() {
+    this.onQueryLocation.emit(this.queryLocation);
+    this.queryLocation = '';
+  }
 
 }

@@ -1,0 +1,9 @@
+:host ::ng-deep .p-sidebar {
+  background-color: #1E213A !important;
+  width: 512px;
+}
+
+input {
+  background-color: #1E213A;
+  color: #E7E7EB;
+}

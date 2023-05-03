@@ -37,4 +37,12 @@ export class WeatherService {
       )
   }
 
+  getWeatherByLocation(location: string): Observable<Weather | null> {
+    const url = `${this.apiUrl}/weather?q=${location}&appid=${this.apiKey}&units=Metric`;
+    return this.http.get<Weather>(url)
+      .pipe(
+        catchError(() => of(null))
+      )
+  }
+
 }

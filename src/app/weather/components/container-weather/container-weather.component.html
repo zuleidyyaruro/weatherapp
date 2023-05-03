@@ -6,7 +6,7 @@
     <aside class="col-12 md:col-12 lg:col-4  p-0 ">
       <app-aside [data]="data" (onButtonSearchPlaces)="searchPlaces($event)"></app-aside>
     </aside>
-    <app-sidebar [sidebarVisible]="sidebarVisible"></app-sidebar>
+    <app-sidebar [sidebarVisible]="sidebarVisible" (onQueryLocation)="searchLocation($event)"></app-sidebar>
     <main class="col-12 md:col-12 lg:col-8 ">
       <app-main [dataDaily]="dataDaily"></app-main>
     </main>

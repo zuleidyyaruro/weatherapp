@@ -1,8 +1,7 @@
-<p-sidebar [(visible)]="sidebarVisible">
-  <h3>Sidebar</h3>
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-    aliqua.
-    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-  </p>
+<p-sidebar [(visible)]="sidebarVisible" styleClass="w-33rem">
+  <div class="grid mt-3">
+    <input type="text" placeholder="search location" class="border-white p-3 col-8 mx-2" [(ngModel)]="queryLocation">
+    <button class="bg-blue-500 p-3 border-none col-3 cursor-pointer" (click)="searchLocation()">Search</button>
+  </div>
+
 </p-sidebar>
